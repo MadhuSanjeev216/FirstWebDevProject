@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+    <title>Chararcter Count Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h2{
+            font-family:'Gothic Medium';
+            font-style: italic;
+            margin-left:60px;
+        }
+        form{
+            margin-left:350px;
+            border:solid;
+            border-color:black;
+            border-radius:20px;
+            width: 200px;
+            padding:30px;
+            margin-top:50px;
+            background-color:bisque;
+            color:chocolate 
+        }
+    </style>
+    <script src="/src/js/characterCount.js"></script>
+</head>
+<body>
+    <h2>How are you feeling! Share with me as short and sweet
+        because I can't take a lot</h2>
+    <form id="calcForm">
+        <div>
+            <label for ="comments">Enter Here:</label>
+            <textarea name="comments" id="comments" autofocus required></textarea>
+        </div>
+        <div>
+            <label for="count">Count on your feelings:</label>
+            <input type="number" name="count" id="count">
+        </div>
+        <div>
+            <label for="result">My feelings for you:</label>
+            <textarea name="result" id="result"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="submit" id="submit">
+        </div>
+    </form>
+</body>
+
+</html>

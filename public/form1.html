@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="shortcut icon" href="assets/kubeclouds.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main-css.css" />
+    <title>KubeClouds enrollment form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta
+      name="keywords"
+      content="kubeclouds itconsulting itservices 'us it consultancy' sponsor H1-B"
+    />
+    <meta
+      name="Description"
+      content="Fill up the following form details to enroll for H1-B lottery for 2023"
+    />
+    <style>
+      dl {
+        display: grid;
+        grid-template-columns: 2fr 9fr;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="Enter as in passport"
+            />
+          </div>
+          <div class="form-group col-md-2">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Enter as in passport"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="dob">Date of birth</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              placeholder="Enter as in passport"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="gender">Gender</label>
+            <input list="genderList" class="form-control" id="gender" />
+            <datalist id="genderList">
+              <option value="Male" />
+              <option value="Female" />
+            </datalist>
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer></footer>
+  </body>
+</html>
