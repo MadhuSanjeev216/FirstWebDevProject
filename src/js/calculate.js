@@ -1,6 +1,5 @@
 function calculate(){
     let total;
-    let abhi;
     let price = document.getElementById('price').value;
     let quantity = document.getElementById('quantity').value;
     total = price * quantity;
