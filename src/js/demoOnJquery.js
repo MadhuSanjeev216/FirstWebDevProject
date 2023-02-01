@@ -173,7 +173,7 @@
   }*/
 
   //============================Manipulating the DOM Elements============================================
-  $(function () {
+ /* $(function () {
 
     // To retrieve or set the value of a CSS property, you can use css().
     // This works similar to attr() and prop(): pass one argument to read
@@ -211,6 +211,81 @@
    /* redBox.css("user-select", function() {
       // [some logic here...]
       return "none";
-    });*/
+    });
   
-  });
+  });*/
+
+//============================Adding or Removing css with $==============================================
+/*  $(function () {
+
+    // Additional CSS classes can be added to an element via addClass()
+  
+    // For instance, add the class .fancy-link to all anchor tags.
+    // Note that you *do not* add a dot in front of the class name here.
+    $("a").addClass("fancy-link");
+  
+    // You can also add multiple classes at once.
+    $("p:first").addClass("large emphasize");
+  
+    // To attach a class based on the index of the element in your selected
+    // set of elements, you can use a callback function.
+    $("li li").addClass(function(index) {
+      // This adds classes .item-0, .item-1, ... to the list's sub-items.
+      $(this).addClass("item-" + index);
+      //console.log(index);
+    });
+  
+    // You can even use two parameters for the callback function, the index
+    // and the current class of the element.
+    $("div").addClass(function(index, currentClasses) {
+      console.log(currentClasses);  // String containing all classes
+  
+      // Add .red-box if the current classes contain "dummy"
+      if (currentClasses.indexOf("dummy") !== -1) {
+        return "red-box";
+      }
+    });
+  
+    // You can again chain these calls to switch one class for another.
+    $(".green-box").removeClass("green-box").addClass("blue-box");
+  
+    // To quickly toggle one particular CSS class, use toggleClass().
+    $("li li:first").toggleClass("emphasize");
+  
+  });*/
+//===================Changing the Data of an element=======================================================
+$(function () {
+
+    // jQuery allows you to attach arbitrary data to any element, represented as
+    // HTML attributes prefixed with "data-", e.g. "data-images".
+    // Here, we'll attach data about all available images to the gallery itself.
+  
+    // Select the <img> inside the gallery to manipulate it later
+    var gallery = $(".gallery");
+  
+    // Initialize an array of all images for the gallery
+    var images = [
+      "/public/assets/laptop-mobile_small.jpg",
+      "/public/assets/laptop-on-table_small.jpg",
+      "/public/assets/people-office-group-team_small.jpg"
+    ];
+  
+    // To attach data, use the data() function and pass in two arguments: first,
+    // the key for the data, and second the actual data/value.
+    gallery.data("availableImages", images);
+    // To retrieve the data, again use just one argument: the key.
+    console.log(gallery.data("availableImages"));  // Array[...]
+  
+    gallery.data("name", "The Amazing Gallery");
+    console.log(gallery.data("name"));  // The Amazing Gallery
+  
+    // Remove data just as easily using removeData().
+    gallery.removeData("name");
+    console.log(gallery.data("name"));  // undefined
+  
+    // If you attach data directly in HTML via an attribute prefixed with "data-",
+    // you can read that automatically from jQuery.
+    var data = $("p:first").data("mydata");
+    console.log(data);  // Data coming from HTML attribute
+  
+  });  
