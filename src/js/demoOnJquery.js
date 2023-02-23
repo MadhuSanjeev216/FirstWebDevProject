@@ -1,3 +1,4 @@
+//================================================Animations============================================================
 /*$(function(){
     $(".red-box").fadeOut(2000);
     $(".green-box").fadeOut(4000);
@@ -37,7 +38,7 @@
     $(".lightbox").delay(2000).fadeIn(2000);
   
   });*/
-
+//==================================================Selectors=========================================================
 /*  $(function () {
 
     // NOTE: Some of the selectors below overlap. To see the exact effect of one
